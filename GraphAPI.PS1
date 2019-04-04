@@ -13,15 +13,26 @@ page_engaged_users:
 Description: The number of people who engaged with your Page. Engagement includes any click.
 Values for 'period' day, week, days_28
 
+
+atlasplato page ID
+1587144278192439
+
+DTE
+180135068711676
+
+
 #>
 
-$access_token = "abcde"
-$object_id ="12345"
+$access_token = "EAAJCFUZAvPngBAFZC9V7JfiHFHYucrWglCQ0eIMQVRDZCN0BHTjBtlJZCMhVqRTu5Npv0hLDlQuZBHwkhItt9yDFFX6fJSsoAY7ul7uGFyamrj3pLZCLr1LRpCpfV6P7nElrHLRvXKF83f0xk57WQokiCft8UftEwNfIuyc1YuxJwiH2GG5jNoss0aDDdhDXMeeVKZBUOkO9dGdqCJ6wvav"
+$object_id ="180135068711676"
 $API_URL = "https://graph.facebook.com/v3.2/"
 $endpoint = "/insights"
-$metric = "/page_engaged_users"
+$metric = "/page_engaged_users/days_28"
+#$field = 'period'
 
-$url = $API_URL + $object_id +$endpoint + $metric + '?access_token' + $access_token
 
-Invoke-RestMethod -Method 'GET'-Uri $url | Format-Table
+$url = $API_URL + $object_id +$endpoint + $metric + '?access_token=' + $access_token
+
+$url
+#Invoke-RestMethod -Method 'GET'-Uri $url | Format-Table
 
