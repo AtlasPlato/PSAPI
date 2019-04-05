@@ -23,10 +23,16 @@ $object_id ="180135068711676"
 $API_URL = "https://graph.facebook.com/v3.2/"
 $endpoint = "/insights"
 $metric = "/page_engaged_users/days_28"
-$local_path = "C:\Users\gulld\Desktop\KCCInsights.json"
+$pathToJsonFile = "C:\Users\gulld\Desktop\KCCInsights.json"
+$pathToOutputFile = "C:\Users\gulld\Desktop\KCCInsights.csv"
 
 $insights_url = $API_URL + $object_id + $endpoint + $metric + '?access_token=' + $page_access_token
 $Insights_data = Invoke-RestMethod -Uri $insights_url 
 
-$Insights_data | ConvertTo-Json -depth 100 | Out-File $local_path
+$Insights_data | ConvertTo-Json -depth 100 | Out-File $pathToJsonFile
 
+
+#Convert to CSV
+((Get-Content -Path $pathToJsonFile) | ConvertFrom-Json).data.values |
+    ConvertTo-Csv -NoTypeInformation |
+    Set-Content $pathToOutputFile
