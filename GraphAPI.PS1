@@ -26,9 +26,7 @@ $metric = "/page_engaged_users/days_28"
 
 
 $insights_url = $API_URL + $object_id + $endpoint + $metric + '?access_token=' + $page_access_token
-$insights_url
+$Insights_data = Invoke-RestMethod -Uri $insights_url 
 
-
-
-Invoke-RestMethod -Uri $insights_url 
+$Insights_data | ConvertTo-Json -depth 100 | Out-File "C:\Users\gulld\Desktop\KCCInsights.json"
 
