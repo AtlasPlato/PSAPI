@@ -13,26 +13,22 @@ page_engaged_users:
 Description: The number of people who engaged with your Page. Engagement includes any click.
 Values for 'period' day, week, days_28
 
-
-atlasplato page ID
-1587144278192439
-
-DTE
-180135068711676
-
-
+-----------------facebook pages = object_id---------------
+atlasplato page ID -1587144278192439
+DTE - 180135068711676
 #>
 
-$access_token = "EAAJCFUZAvPngBAFZC9V7JfiHFHYucrWglCQ0eIMQVRDZCN0BHTjBtlJZCMhVqRTu5Npv0hLDlQuZBHwkhItt9yDFFX6fJSsoAY7ul7uGFyamrj3pLZCLr1LRpCpfV6P7nElrHLRvXKF83f0xk57WQokiCft8UftEwNfIuyc1YuxJwiH2GG5jNoss0aDDdhDXMeeVKZBUOkO9dGdqCJ6wvav"
+$page_access_token = "EAAJCFUZAvPngBAAXLidXKyaaqgh6qWJXf2yY9NEaoIO2aVtA2yHQmX2ZAThkVf7A9K3mlWLRR76KSOsUp337ZCRatVjEonoX91rfgLWR0mhPErDQaM41LZAZCvFAzYktMbqLJXdBEtsJyoqy4ICnxZCx4gtrxDcAwS52rWL3AlA9ErJcRHEiwn2HZCV3RuBHZBAZD"
 $object_id ="180135068711676"
 $API_URL = "https://graph.facebook.com/v3.2/"
 $endpoint = "/insights"
 $metric = "/page_engaged_users/days_28"
-#$field = 'period'
 
 
-$url = $API_URL + $object_id +$endpoint + $metric + '?access_token=' + $access_token
+$insights_url = $API_URL + $object_id + $endpoint + $metric + '?access_token=' + $page_access_token
+$insights_url
 
-$url
-#Invoke-RestMethod -Method 'GET'-Uri $url | Format-Table
+
+
+Invoke-RestMethod -Uri $insights_url 
 
