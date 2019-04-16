@@ -14,12 +14,11 @@ Description: The number of people who engaged with your Page. Engagement include
 Values for 'period' day, week, days_28
 
 -----------------facebook pages = object_id---------------
-atlasplato page ID -1587144278192439
-DTE - 180135068711676
+Knox page - 195935530460725
 #>
 
-$page_access_token = "EAAJCFUZAvPngBAAXLidXKyaaqgh6qWJXf2yY9NEaoIO2aVtA2yHQmX2ZAThkVf7A9K3mlWLRR76KSOsUp337ZCRatVjEonoX91rfgLWR0mhPErDQaM41LZAZCvFAzYktMbqLJXdBEtsJyoqy4ICnxZCx4gtrxDcAwS52rWL3AlA9ErJcRHEiwn2HZCV3RuBHZBAZD"
-$object_id ="180135068711676"
+$page_access_token = "EAAEgKu23i2IBACEa4tNtMZARBfahUL1qtEY2AL9i8k8zuAr0SQT8xNkCClc2wdekNBuf3R9NXhNGePmlDCtfy1VLqLZAn4lZCR4K4052lhc0dkPXCk6Y15za8kxXWZABo2G5lB9LH6ga1TRnAt57ErZB2RgijBhFVtkGzQ8pilhA6KmU2kKQob2BUutO7h54ZD"
+$object_id ="195935530460725"
 $API_URL = "https://graph.facebook.com/v3.2/"
 $endpoint = "/insights"
 $metric = "/page_engaged_users/days_28"

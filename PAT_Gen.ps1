@@ -9,9 +9,9 @@ fb_exchange_token - the short lived token, able to be generated from the graph A
 #>
 
 
-$client_id = "635609096863352"
-$client_secret = "9467841693a6a14b2f87a0f88c0cc66b"
-$fb_exchange_token= "EAAJCFUZAvPngBAAdmcYvDQ09e5Rs1hswm0UAF8PNv0i9HZC5tXlDn5CZBIeoTrD13aZBkCiFiqvKOVrX7xzy16mvHCEqMpOcDuBaFfrR2hJinfmNSzZA0YZAhE3H1rxiy8UOwZAXvRnwZBCXUZBLHvlPQtZBjnFRhbonEfZAAAwZBv1bP3CV8KGO2cKS74moaxy9Ams5KCSUO26fbZA7I8KpWOilz"
+$client_id = "316843725654882"
+$client_secret = "24f029669419df99c494aa37698cfb68"
+$fb_exchange_token= "EAAEgKu23i2IBAIkxq7Ywl4CX7kUwQrC1EGzKvBg6m9Ag1QZAYZCZCE6LQn1A2NaxQQXzQhywZAE7YChYGvTnXUWXQ8tPORJ7ORtFFDN2tWthrGVBri6JblKu9WOZCnMClcTeZCB36RxH7JHiHPeW2yjFipOFLkPKxXmoAGXdIPqJ2ZAfvoTDc195kuqGTtgaOHMyWlZBNaKYxnZBNx0ZBkXItVKVgRWKC57a1ygxP9l26tb7T8ae8CQ4uaQjGyN7FdWxQZD"
 $API_URL = "https://graph.facebook.com/v3.2/"
 
 $long_term_token_url = $API_URL + 'oauth/access_token?grant_type=fb_exchange_token&client_id='+ $client_id + '&client_secret=' + $client_secret + '&fb_exchange_token=' + $fb_exchange_token

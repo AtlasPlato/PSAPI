@@ -6,5 +6,6 @@ Author: David Gulli
 */
 
 BULK INSERT dbo.Social_FacebookPageInsights
-FROM 'KCCInsights.csv'
+FROM 'C:\temp\KCCInsights.csv'
 WITH (FIRSTROW=2);
+
