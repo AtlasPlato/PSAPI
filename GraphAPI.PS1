@@ -22,8 +22,8 @@ $object_id ="195935530460725"
 $API_URL = "https://graph.facebook.com/v3.2/"
 $endpoint = "/insights"
 $metric = "/page_engaged_users/days_28"
-$pathToJsonFile = "C:\Users\gulld\Desktop\KCCInsights.json"
-$pathToOutputFile = "C:\Users\gulld\Desktop\KCCInsights.csv"
+$pathToJsonFile = "C:\temp\KCCInsights.json"
+$pathToOutputFile = "C:\temp\KCCInsights.csv"
 
 $insights_url = $API_URL + $object_id + $endpoint + $metric + '?access_token=' + $page_access_token
 $Insights_data = Invoke-RestMethod -Uri $insights_url 
